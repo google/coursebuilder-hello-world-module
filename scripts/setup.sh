@@ -23,10 +23,6 @@ set -e
 shopt -s nullglob
 
 export SOURCE_DIR="$( cd "$( dirname "$0" )" && cd .. && pwd )"
-# Update this revision to the Course Builder check-in you want.
-export COURSE_BUILDER_REVISION=ac4aa3131228
-export COURSE_BUILDER_URL=https://code.google.com/p/course-builder/
-
 export MODULE_NAME=hello
 export MODULE_SRC_DIR=$SOURCE_DIR/src
 export MODULE_TESTS_DIR=$SOURCE_DIR/tests

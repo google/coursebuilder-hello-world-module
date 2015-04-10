@@ -1,7 +1,7 @@
 module_name: modules.hello.hello
 module_uri: https://github.com/google/coursebuilder-hello-world-module
-module_version: 1.0.0
-container_version: 1.7.0-ac4aa3131228
+module_version: 1.0.1
+container_version: 1.8.0-d2467e99e5a4
 description: Example of Course Builder modules
 license: Apache 2.0
 tests:
