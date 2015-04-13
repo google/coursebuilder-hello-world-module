@@ -153,7 +153,7 @@ sh scripts/test.sh tests.ext.hello.functional_tests
 To run all tests in Course Builder as well as your module, run
 
 ```sh
-python scripts/run_all_tests.py
+sh scripts/run_all_tests.sh
 ```
 
 ## That's it
