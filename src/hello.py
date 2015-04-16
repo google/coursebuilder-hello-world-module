@@ -82,7 +82,8 @@ custom_module = None
 
 
 def register_module():
-    global custom_module
+    # Allow global per CB module pattern.
+    global custom_module  # pylint: disable=global-statement
 
     global_handlers = [
         (GlobalHandler.URL, GlobalHandler),
