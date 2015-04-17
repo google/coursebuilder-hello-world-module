@@ -156,6 +156,34 @@ To run all tests in Course Builder as well as your module, run
 sh scripts/run_all_tests.sh
 ```
 
+### Working from local disk
+
+Sometimes you don't want to fetch a module from a remote repository, but instead
+want to use source from local disk. This happens often when creating a new
+module. The module system allows you to address this by passing a local
+filesystem path into the modules script.
+
+The set of allowable paths is limited to those under `/tmp`, `/var/folders`, and
+one level up from where you are invoking the modules script.
+
+We suggest creating a symlink from your local file location to `/tmp/<module>`.
+For example, if the code for this module lived in
+`/$HOME/src/coursebuilder-hello-world-module`, you would first create the
+symlink with
+
+```sh
+ln -s /$HOME/src/coursebuilder-hello-world-module \
+    /tmp/coursebuilder-hello-world-module
+```
+
+then, from your Course Builder directory, run
+
+```sh
+sh scripts/modules.sh --targets=hello@/tmp/coursebuilder-hello-world-module
+```
+
+to install the module from local disk. All other commands then work as above.
+
 ## That's it
 
 Enjoy writing Course Builder modules, and please feel free to use this as a
